@@ -5,6 +5,8 @@
  */
 package geneticos2021.pkg2;
 
+import binario.GeneticoBinario;
+import binario.Herramientas;
 import binario.Individuo;
 
 /**
@@ -17,9 +19,10 @@ public class Geneticos20212 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int arreglo[] = new int[]{1,0,0,0,0};
-        Individuo i = new Individuo(arreglo);
-        System.out.println(i.getFenotipo()+" "+i.getFitness());
+       
+        GeneticoBinario gb = new GeneticoBinario(50, 12, 0.12,15);
+        gb.evolucionar();
+        System.out.println(Herramientas.mejorPoblacion(gb.getPoblacionActual()));
     }
     
 }

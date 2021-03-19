@@ -5,6 +5,7 @@
  */
 package binario;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -21,5 +22,13 @@ public class Herramientas {
         }
         return arreglo;
     }
-    
+    public static Individuo mejorPoblacion(ArrayList<Individuo> pob){
+        Individuo mejor = new Individuo(pob.get(0));
+        for(Individuo aux: pob){
+            if (aux.getFitness()< mejor.getFitness()){
+                mejor = new Individuo(aux);
+            }
+        }
+        return mejor;
+    }
 }

@@ -97,6 +97,14 @@ public class Individuo {
     public void setFitness(int fitness) {
         this.fitness = fitness;
     }
+
+    @Override
+    public String toString() {
+        
+        String aux = "Gen: "+ this.genotipo.toString()+" Fen: "+
+        this.fenotipo+" Fit: "+this.fitness;
+        return aux; //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     
